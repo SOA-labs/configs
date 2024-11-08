@@ -9,3 +9,16 @@ app:
 logging:
   level:
     root: info
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:default
+    username: sa
+    password: 
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
