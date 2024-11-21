@@ -1,5 +1,5 @@
 server:
-  port: 8090
+  port: ${APP_PORT:0}
 
 app:
   base-url: /v1/oscar
