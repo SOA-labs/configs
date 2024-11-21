@@ -1,11 +1,11 @@
 server:
-  port: ${APP_PORT:8090}
+  port: 8090
 
 app:
   base-url: /v1/oscar
   first-service:
     base-url:
-      movies: ${FIRST_SERVICE_URL:http://localhost:8080/lab2-1.0-SNAPSHOT/api}/movies
+      movies: ${FIRST_SERVICE_URL}/movies
 logging:
   level:
     root: info
@@ -22,3 +22,7 @@ spring:
   h2:
     console:
       enabled: true
+eureka:
+  client:
+    region: default
+    registryFetchIntervalSeconds: 15
